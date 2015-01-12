@@ -1,0 +1,12 @@
+# Common files
+.*
+!.gitignore
+!.gitkeep
+
+# JS specific files
+!.bowerrc
+src/main/webapp/WEB-INF/components/
+
+# IDE specific files
+out
+build

@@ -1,0 +1,12 @@
+apply plugin: 'war'
+
+sourceCompatibility = 1.7
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.3.2'
+}
