@@ -18,3 +18,17 @@ dependencies {
 }
 
 war.archiveName = 'codewarrior.war'
+
+task deployWar() {
+    def tomcatHome = '/usr/local/tomcat7/webapps'
+    doLast {
+        logger.lifecycle("Going to deploy codewarrior into ${tomcatHome} from ${libsDir.getPath()}")
+
+        copy {
+            from libsDir
+            into "${tomcatHome}"
+            include 'codewarrior.war'
+        }
+    }
+}
+deployWar.dependsOn(war)
