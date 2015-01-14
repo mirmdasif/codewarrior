@@ -1,6 +1,11 @@
 package net.codewarrior.config;
 
+import net.codewarrior.filter.ConfiguredSiteMeshFilter;
+import org.sitemesh.config.ConfigurableSiteMeshFilter;
+import org.sitemesh.webapp.SiteMeshFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.Filter;
 
 /**
  * @author asif.hossain
@@ -20,5 +25,10 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
     @Override
     protected String[] getServletMappings() {
         return new String[]{"/"};
+    }
+
+    @Override
+    protected Filter[] getServletFilters() {
+        return new  Filter[]{new ConfiguredSiteMeshFilter()};
     }
 }
