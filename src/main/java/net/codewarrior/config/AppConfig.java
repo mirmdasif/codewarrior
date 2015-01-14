@@ -1,5 +1,6 @@
 package net.codewarrior.config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +15,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @Configuration
 @ComponentScan("net.codewarrior")
 @EnableWebMvc
-public class SpringConfig {
+public class AppConfig {
 
     private static final String DEFAULT_VIEW_PREFIX = "/WEB-INF/views/";
     private static final String DEFAULT_VIEW_SUFFIX = ".jsp";
